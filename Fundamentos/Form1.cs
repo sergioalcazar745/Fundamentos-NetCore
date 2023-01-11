@@ -17,6 +17,7 @@ namespace Fundamentos
             this.txtNombre.Location = new Point(70, 100);
 
             //PROPIEDADES DE TIPO ENUMERADAS
+            //dsds
             this.txtNombre.TextAlign = HorizontalAlignment.Center;
             this.BackColor = Color.Beige;
             this.btnPulsar.BackColor = Color.LightGreen;
