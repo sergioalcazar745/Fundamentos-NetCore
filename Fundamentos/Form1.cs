@@ -19,6 +19,7 @@ namespace Fundamentos
             //PROPIEDADES DE TIPO ENUMERADAS
             this.txtNombre.TextAlign = HorizontalAlignment.Center;
             this.BackColor = Color.Beige;
+            this.btnPulsar.BackColor = Color.LightGreen;
         }
     }
 }
