@@ -21,6 +21,7 @@ namespace Fundamentos
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             Random random = new Random();
+            lstRandom.Items.Clear();
 
             for (int i = 0; i < 10; i++)
             {
@@ -34,17 +35,17 @@ namespace Fundamentos
             int pares = 0;
             int impares = 0;
 
-            foreach (object item in lstRandom.Items)
+            foreach (int item in lstRandom.Items)
             {
-                if((int) item % 2 == 0)
+                if(item % 2 == 0)
                 {
-                    pares += (int)item;
+                    pares += item;
                 }
                 else
                 {
-                    impares += (int)item;
+                    impares += item;
                 }
-                suma += (int)item;
+                suma += item;
             }
 
             txtSuma.Text = "" + suma;
