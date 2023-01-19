@@ -30,7 +30,6 @@ namespace Fundamentos
 
             foreach (string mes in this.listaMeses)
             {
-
                 int numero = int.Parse(mes.Substring(mes.IndexOf(":") + 1));
 
                 if(numero > temperaturaMaxima)
