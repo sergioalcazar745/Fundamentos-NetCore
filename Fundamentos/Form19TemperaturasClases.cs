@@ -22,17 +22,22 @@ namespace Fundamentos
 
         private void btnGenerarMeses_Click(object sender, EventArgs e)
         {
+            this.lstMeses.Items.Clear();
             string[] meses = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
+            Random random = new Random();
             foreach(string mes in meses)
             {
                 this.lstMeses.Items.Add(mes);
-                
+                this.temperaturas.Add(new Temperaturas(random.Next(20, 40), random.Next(-20, 19)));
             }
         }
 
         private void lstMeses_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            Temperaturas tp = this.temperaturas[this.lstMeses.SelectedIndex];
+            txtMaxima.Text = tp.TemperaturaMaxima.ToString();
+            txtMinimo.Text = tp.TemperaturaMinima.ToString();
+            txtMediaAnual.Text = tp.MediaAnual.ToString();
         }
     }
 }

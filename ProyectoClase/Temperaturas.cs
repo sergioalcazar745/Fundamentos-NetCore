@@ -13,7 +13,6 @@ namespace ProyectoClase
             this.TemperaturaMaxima = temperaturaMaxima;
             this.TemperaturaMinima = temperaturaMinima;
             this.calcularMediaAnual();
-
         }
 
         #region PROPIEDADES
