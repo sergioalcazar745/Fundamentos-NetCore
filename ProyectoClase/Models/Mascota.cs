@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace ProyectoClase.Models
 {
@@ -12,6 +13,7 @@ namespace ProyectoClase.Models
         public string Nombre { get; set; }
         public string Raza { get; set; }
         public int Years { get; set; }
+        public byte[] Imagen { get; set; }
 
         #endregion
     }

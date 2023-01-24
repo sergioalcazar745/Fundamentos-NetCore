@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 using System.IO;
 using ProyectoClase.Models;
+using ProyectoClase.Helpers;
 
 namespace Fundamentos
 {
@@ -17,11 +18,15 @@ namespace Fundamentos
     {
         XmlSerializer serializer;
         List<Mascota> coleccionMascotas;
+        HelperMascotas helper;
+        byte[] imagen;
         public Form24ColeccionXMLMascotas()
         {
             InitializeComponent();
             this.serializer = new XmlSerializer(typeof(List<Mascota>));
             this.coleccionMascotas = new List<Mascota>();
+            this.helper = new HelperMascotas();
+            this.imagen = null;
         }
 
         private void btnNuevaMascotas_Click(object sender, EventArgs e)
@@ -30,6 +35,7 @@ namespace Fundamentos
             mascota.Nombre = this.txtNombre.Text;
             mascota.Raza = this.txtRaza.Text;
             mascota.Years = int.Parse(this.txtEdad.Text);
+            mascota.Imagen = this.imagen;
             this.coleccionMascotas.Add(mascota);
             this.txtNombre.Text = "";
             this.txtRaza.Text = "";
@@ -76,6 +82,16 @@ namespace Fundamentos
                 this.txtNombre.Text = mascota.Nombre;
                 this.txtRaza.Text = mascota.Raza;
                 this.txtEdad.Text = mascota.Years.ToString();
+                this.pictureBox1.Image = Image.FromStream(HelperMascotas.ConvertBytesToStream(mascota.Imagen));
+            }
+        }
+
+        private void btnExaminar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                this.imagen = HelperMascotas.ConvertFileToByte(ofd.FileName);
             }
         }
     }

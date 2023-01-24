@@ -39,6 +39,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lstMascotas = new System.Windows.Forms.ListBox();
             this.btnNuevaMascotas = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnExaminar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEdad
@@ -149,11 +152,33 @@
             this.btnNuevaMascotas.UseVisualStyleBackColor = true;
             this.btnNuevaMascotas.Click += new System.EventHandler(this.btnNuevaMascotas_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(168, 289);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(219, 179);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnExaminar
+            // 
+            this.btnExaminar.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExaminar.Location = new System.Drawing.Point(402, 430);
+            this.btnExaminar.Name = "btnExaminar";
+            this.btnExaminar.Size = new System.Drawing.Size(144, 38);
+            this.btnExaminar.TabIndex = 30;
+            this.btnExaminar.Text = "Examinar\r\n";
+            this.btnExaminar.UseVisualStyleBackColor = true;
+            this.btnExaminar.Click += new System.EventHandler(this.btnExaminar_Click);
+            // 
             // Form24ColeccionXMLMascotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 370);
+            this.ClientSize = new System.Drawing.Size(824, 492);
+            this.Controls.Add(this.btnExaminar);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnNuevaMascotas);
             this.Controls.Add(this.lstMascotas);
             this.Controls.Add(this.label4);
@@ -167,6 +192,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form24ColeccionXMLMascotas";
             this.Text = "Form24ColeccionXMLMascotas";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,5 +211,7 @@
         private Label label4;
         private ListBox lstMascotas;
         private Button btnNuevaMascotas;
+        private PictureBox pictureBox1;
+        private Button btnExaminar;
     }
 }
