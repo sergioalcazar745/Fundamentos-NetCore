@@ -49,10 +49,7 @@ namespace ProyectoClase.Helpers
 
         public static MemoryStream ConvertBytesToStream(byte[] bytes)
         {
-            using (MemoryStream memory = new MemoryStream(bytes))
-            {
-                return memory;
-            }
+            return new MemoryStream(bytes);
         }
 
         public async Task ReadFileMascotasAsync(string path)

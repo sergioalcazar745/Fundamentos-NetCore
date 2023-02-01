@@ -86,12 +86,12 @@ namespace Fundamentos
             }
         }
 
-        private void btnExaminar_Click(object sender, EventArgs e)
+        private async void btnExaminar_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             if(ofd.ShowDialog() == DialogResult.OK)
             {
-                this.imagen = HelperMascotas.ConvertFileToByte(ofd.FileName);
+                this.imagen = await HelperMascotas.ConvertFileToByte(ofd.FileName);
             }
         }
     }
