@@ -28,7 +28,7 @@ namespace Fundamentos
                 resultado += int.Parse(caracter.ToString());
             }
 
-            lblResultado.Text = "El resultado es: " + resultado;
+            this.lblResultado.Text = "El resultado es: " + resultado;
         }
     }
 }

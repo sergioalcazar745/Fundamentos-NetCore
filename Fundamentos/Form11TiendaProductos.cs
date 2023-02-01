@@ -112,7 +112,7 @@ namespace Fundamentos
         {
             if(lstTienda.Items.Count > 0)
             {
-                foreach (string item in lstTienda.Items)
+                foreach (string item in this.lstTienda.Items)
                 {
                     lstAlmacen.Items.Add(item);
                 }
@@ -127,7 +127,7 @@ namespace Fundamentos
 
         private void btnSubir_Click(object sender, EventArgs e)
         {
-            if (lstAlmacen.Items.Count > 1)
+            if (this.lstAlmacen.Items.Count > 1)
             {
                 this.btnBajar.Enabled = true;
                 int seleccionado = lstAlmacen.SelectedIndex;
@@ -149,7 +149,7 @@ namespace Fundamentos
 
         private void btnBajar_Click(object sender, EventArgs e)
         {
-            if(lstAlmacen.Items.Count > 1)
+            if(this.lstAlmacen.Items.Count > 1)
             {
                 this.btnSubir.Enabled = true;
                 int seleccionado = lstAlmacen.SelectedIndex;

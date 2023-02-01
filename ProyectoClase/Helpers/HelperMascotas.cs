@@ -42,14 +42,17 @@ namespace ProyectoClase.Helpers
             return data;
         }
 
-        public static byte[] ConvertFileToByte(string fileName)
+        public static async Task<byte[]> ConvertFileToByte(string fileName)
         {
-            return File.ReadAllBytes(fileName);
+            return await File.ReadAllBytesAsync(fileName);
         }
 
         public static MemoryStream ConvertBytesToStream(byte[] bytes)
         {
-            return new MemoryStream(bytes);
+            using (MemoryStream memory = new MemoryStream(bytes))
+            {
+                return memory;
+            }
         }
 
         public async Task ReadFileMascotasAsync(string path)
